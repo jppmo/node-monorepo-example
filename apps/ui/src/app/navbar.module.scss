@@ -1,0 +1,19 @@
+.navbar {
+  background-color: #8a8a8a;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navbarLink {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 16px;
+}
+
+.navbarLink:hover {
+  background-color: #555;
+  border-radius: 4px;
+}

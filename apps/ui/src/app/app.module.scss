@@ -1,1 +1,79 @@
 /* Your styles goes here. */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+
+  .outputResponse {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: 400px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: monospace;
+  }
+
+  h2 {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .emailForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .emailInput {
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 300px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  }
+
+  .passwordForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .passwordInput {
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 300px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .passwordInputError {
+      @extend .passwordInput;
+      border: 1px solid #ff0000;
+    }
+
+    .errorLabel {
+      color: #ff0000;
+      padding: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+
+  .submitButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}

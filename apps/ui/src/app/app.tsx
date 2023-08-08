@@ -1,49 +1,22 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
-
-import NxWelcome from './nx-welcome';
-
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes, Link, BrowserRouter as Router } from 'react-router-dom';
+import SetEmail from './components/SetEmail';
+import SetNewPassword from './components/SetNewPassword';
+import YourPassword from './components/YourPassword';
+import SetOneTimePassword from './components/SetOneTimePassword';
+import styles from './navbar.module.scss';
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="ui" />
-
-      {/* START: routes */}
-      {/* These routes and navigation have been generated for you */}
-      {/* Feel free to move and update them to fit your needs */}
-      <br />
-      <hr />
-      <br />
-      <div role="navigation">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/page-2">Page 2</Link>
-          </li>
-        </ul>
-      </div>
+      <nav className={styles.navbar}>
+            <Link className={styles.navbarLink} to="/">Back to enter email</Link>
+      </nav>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <div>
-              This is the generated root route.{' '}
-              <Link to="/page-2">Click here for page 2.</Link>
-            </div>
-          }
-        />
-        <Route
-          path="/page-2"
-          element={
-            <div>
-              <Link to="/">Click here to go back to root page.</Link>
-            </div>
-          }
-        />
+        <Route path="/" Component={SetEmail} />
+        <Route path="/new-password" Component={SetNewPassword} />
+        <Route path="/your-password" Component={YourPassword} />
+        <Route path="/one-time-password" Component={SetOneTimePassword} />
       </Routes>
       {/* END: routes */}
     </div>
